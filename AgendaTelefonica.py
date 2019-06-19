@@ -43,7 +43,7 @@ while True:
 
     if opcao == 1:
         if len(matriz) < 11 :
-            mostraLinhasEmensagens("|>>>>     CADASTRAR CONTATOS        <<<<|")
+            mostraLinhasEmensagens("|>>>>     CADASTRAR CONTATOS        ")
             print("|*************************************************|")
             codigo = (int(input("CODIGO    : ")))
             if len(matriz) == 0:
@@ -51,7 +51,7 @@ while True:
                 armazenaValoresInformadosPeloUsuarioNoVetor(vetor)
                 matriz.append(vetor)
                 vetor = []
-                mostraLinhasEmensagens("|>>>  CONTATO CADASTRADO COM SUCESSO  <<<|")
+                mostraLinhasEmensagens("|>>>  CONTATO CADASTRADO COM SUCESSO  ")
             else:
                 jaEmUso = 0
                 for l in range (len(matriz)):
@@ -59,8 +59,7 @@ while True:
                         jaEmUso += 1
 
                 if jaEmUso >= 1 :
-
-                    mostraLinhasEmensagens("|>>>>>>>> CODIGO INFORMADO JA ESTA EM USO <<<<<<<<|")
+                    mostraLinhasEmensagens("|>>>>>>>> CODIGO INFORMADO JA ESTA EM USO ")
                     print("|*************************************************|")
                     codigo2 = int(input(">>>>>>>> INFORME UM NOVO CODIGO     :"))
                     if codigo != codigo2:
@@ -68,10 +67,10 @@ while True:
                         armazenaValoresInformadosPeloUsuarioNoVetor(vetor)
                         matriz.append(vetor)
                         vetor = []
-                        mostraLinhasEmensagens("|>>>  CONTATO CADASTRADO COM SUCESSO  <<<|")
+                        mostraLinhasEmensagens("|>>>  CONTATO CADASTRADO COM SUCESSO ")
 
                     else:
-                        mostraLinhasEmensagens("|>>>  O CODIGO INFORMADO É IGUAL AO ANTERIOR <<<|")
+                        mostraLinhasEmensagens("|>>>  O CODIGO INFORMADO É IGUAL AO ANTERIOR ")
 
                 else:
                     vetor.append(codigo)
@@ -81,16 +80,16 @@ while True:
 
 
         else:
-            mostraLinhasEmensagens("| >>>>>>     NÃO HA ESPAÇO NA AGENDA    <<<<<<< |")
+            mostraLinhasEmensagens("| >>>>>>     NÃO HA ESPAÇO NA AGENDA    ")
     elif opcao == 2 :
             if len(matriz)== 0:
-                mostraLinhasEmensagens("|>>>>>>>  A LISTA ESTA VAZIA <<<<<<<<|")
+                mostraLinhasEmensagens("|>>>>>>>  A LISTA ESTA VAZIA ")
             else:
 
-                mostraLinhasEmensagens("|>>>>    ALTERAR CONTATO         <<<<|")
+                mostraLinhasEmensagens("|>>>>    ALTERAR CONTATO         ")
 
                 print("|*************************************************|")
-                codigo = int(input(" INFORME O CODIGO DO CONTATO QUE DESEJA ALTERAR :"))
+                codigo = int(input(" INFORME O CODIGO DO CONTATO QUE DESEJA ALTERAR : "))
                 print("|*************************************************|")
                 print()
                 print("|*******************|")
@@ -104,9 +103,9 @@ while True:
                 for l in range(len(matriz)):
                     if codigo == matriz[l][0]:
                         if resposta == 1:
-                            mostraLinhasEmensagens(">>>> ALTERAR NOME DO CONTATO <<<<")
+                            mostraLinhasEmensagens(">>>> ALTERAR NOME DO CONTATO ")
                             print("|-------------------------------------------|")
-                            novoNome = str(input("INFORME O ""NOVO"" NOME DO CONTATO :"))
+                            novoNome = str(input("INFORME O ""NOVO"" NOME DO CONTATO : "))
                             print()
                             numero = matriz[l][2]
                             del(matriz[l][1])
@@ -114,27 +113,27 @@ while True:
                             matriz[l].append(novoNome)
                             matriz[l].append(numero)
                             print("|-------------------------------------------|")
-                            mostraLinhasEmensagens("|>>>  CONTATO ALTERADO COM SUCESSO  <<<|")
+                            mostraLinhasEmensagens("|>>>  CONTATO ALTERADO COM SUCESSO  ")
                         elif resposta == 2 :
-                            mostraLinhasEmensagens(">>>> ALTERAR NUMERO DO CONTATO <<<<")
+                            mostraLinhasEmensagens(">>>> ALTERAR NUMERO DO CONTATO ")
 
-                            novoNumero = int(input("INFORME O ""NOVO"" NUMERO DO CONTATO :"))
+                            novoNumero = int(input("INFORME O ""NOVO"" NUMERO DO CONTATO : "))
                             del(matriz[l][2])
                             matriz[l].append(novoNumero)
                             print("|-------------------------------------------|")
-                            mostraLinhasEmensagens("|>>>  CONTATO ALTERADO COM SUCESSO    <<<|")
+                            mostraLinhasEmensagens("|>>>  CONTATO ALTERADO COM SUCESSO    ")
                         else:
-                            mostraLinhasEmensagens(">>>>  A OPAÇÃO ESCOLHIDA É INVALIDA <<<<")
+                            mostraLinhasEmensagens(">>>>  A OPAÇÃO ESCOLHIDA É INVALIDA ")
                     else:
                         if l == len(matriz):
-                            mostraLinhasEmensagens("|>>>>>>>  NÃO HA CONTATO CADASTRADO COM O CODIGO INFORMADO <<<<<<<<|")
+                            mostraLinhasEmensagens("|>>>>>>>  NÃO HA CONTATO CADASTRADO COM O CODIGO INFORMADO ")
 
 
 
     elif opcao == 3:
         continuar = True
         if len(matriz)== 0:
-            mostraLinhasEmensagens("|>>>>>>>  A LISTA ESTA VAZIA <<<<<<<<|")
+            mostraLinhasEmensagens("|>>>>>>>  A LISTA ESTA VAZIA ")
         else:
 
             print("|-----------------------------------------------------------|")
@@ -145,16 +144,16 @@ while True:
                 for l in range(len(matriz)):
                     if codigo == matriz[l][0]:
                         del(matriz[l])
-                        mostraLinhasEmensagens("|>>>>  CONTATO EXCLUIDO COM SUCESSO     <<<<|")
+                        mostraLinhasEmensagens("|>>>>  CONTATO EXCLUIDO COM SUCESSO     ")
                         continuar = False
                     else:
-                        mostraLinhasEmensagens("|>>>>>>>  NÃO HA CONTATO CADASTRADO COM O CODIGO INFORMADO <<<<<<<<|")
+                        mostraLinhasEmensagens("|>>>>>>>  NÃO HA CONTATO CADASTRADO COM O CODIGO INFORMADO ")
                         continuar = False
 
 
     elif opcao == 4:
         if len(matriz)== 0:
-            mostraLinhasEmensagens("|>>>>>>>  A LISTA ESTA VAZIA <<<<<<<<|")
+            mostraLinhasEmensagens("|>>>>>>>  A LISTA ESTA VAZIA ")
         else:
             for l in range(len(matriz)):
                 print("|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-|")
@@ -168,14 +167,15 @@ while True:
 
     elif opcao == 5:
         if len(matriz) == 0:
-            mostraLinhasEmensagens("|>>>>>>>  A LISTA ESTA VAZIA <<<<<<<<|")
+            mostraLinhasEmensagens("|>>>>>>>  A LISTA ESTA VAZIA ")
         else:
             print()
             print("|----------------------------------------------------------------------|")
-            codigo = int(input(">>>>> INFORME O CODIGO DO CONTATO QUE DESEJA BUSCAR <<<<<"))
+            codigo = int(input(">>>>> INFORME O CODIGO DO CONTATO QUE DESEJA BUSCAR : "))
             print("|-----------------------------------------------------------------------|")
             print()
-            while continuar:
+            continuar = True
+            while continuar :
                 cont = 0
                 for l in range(len(matriz)):
                     if codigo == matriz[l][0]:
@@ -191,7 +191,7 @@ while True:
                     else:
                         cont += 1
                         if cont == len(matriz):
-                            mostraLinhasEmensagens("|>>>>>>>  NÃO HA CONTATO CADASTRADO COM O CODIGO INFORMADO <<<<<<<<|")
+                            mostraLinhasEmensagens("|>>>>>>>  NÃO HA CONTATO CADASTRADO COM O CODIGO INFORMADO ")
                             continuar = False
 
 
@@ -199,7 +199,7 @@ while True:
         c = 0
         contNome = 0
         if len(matriz) == 0:
-            mostraLinhasEmensagens("|>>>>>>>  A LISTA ESTA VAZIA <<<<<<<<|")
+            mostraLinhasEmensagens("|>>>>>>>  A LISTA ESTA VAZIA ")
         else:
             print()
             print("|-----------------------------------------------------------|")
@@ -222,12 +222,12 @@ while True:
                 else:
                     c = c+1
                     if c == len(matriz):
-                        mostraLinhasEmensagens("|>>>      O NOME INFORMADO NÃO ESTA NA LISTA          <<<|")
+                        mostraLinhasEmensagens("|>>>      O NOME INFORMADO NÃO ESTA NA LISTA          ")
 
 
             if contNome > 1 :
                     print("-="*30)
-                    print(f"EXISTEM {contNome} CONTATOS SALVOS COM O MESMO NOME :")
+                    print(f"EXISTEM {contNome} CONTATOS SALVOS COM O MESMO NOME : ")
                     print("-=" * 30)
                     print()
                     continuar = False
